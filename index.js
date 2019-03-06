@@ -27,7 +27,7 @@ function createIssue() {
     let token = "bce01512b629755e6f146fd1a8bc1ffa3fbcf2da"
     fetch(`https://api.github.com/repos/learn-co-curriculum/js-ajax-fetch-lab/issues`, {
       method: 'POST',
-      body: ""
+      body: "test body"
       headers: {
         Authorization: `token ${token}`
       }
