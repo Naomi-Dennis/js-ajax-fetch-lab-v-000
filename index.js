@@ -24,6 +24,16 @@ function showResults(json) {
 
 function createIssue() {
   //use this function to create an issue based on the values input in index.html
+    let token = "bce01512b629755e6f146fd1a8bc1ffa3fbcf2da"
+    fetch(`https://api.github.com/repos/learn-co-curriculum/js-ajax-fetch-lab/issues`, {
+      method: 'POST',
+      body: ""
+      headers: {
+        Authorization: `token ${token}`
+      }
+    })
+      .then(res => res.json())
+      .then(json => console.log( json  ));
 }
 
 function getIssues() {
