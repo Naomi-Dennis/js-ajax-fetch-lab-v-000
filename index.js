@@ -38,4 +38,14 @@ function createIssue() {
 
 function getIssues() {
   //once an issue is submitted, fetch all open issues to see the issues you are creating
+    let token = "bce01512b629755e6f146fd1a8bc1ffa3fbcf2da"
+    fetch(`https://api.github.com/repos/Naomi-Dennis/js-ajax-fetch-lab/issues`, {
+      method: 'POST',
+      headers: {
+        Authorization: `token ${token}`
+      }
+    })
+      .then(res => res.json())
+      .then(json => console.log( json  ));
+  
 }
